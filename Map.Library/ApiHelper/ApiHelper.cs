@@ -5,7 +5,6 @@ namespace Map.Library.ApiHelper
 {
     public static class ApiHelper
     {
-        //create a static property to hold the http client (single state)
         public static HttpClient Client { get; set; }
 
         public static void InitializeClient()
