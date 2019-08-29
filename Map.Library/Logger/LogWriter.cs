@@ -6,7 +6,11 @@ namespace Map.Library.Logger
     {
         public void WriteMessage(string message)
         {
-            using (var stream = new StreamWriter("C:\\temp\\MapWebApplicationLog.txt",true))
+            const string filePath = "C:\\temp\\MapWebApplicationLog.txt";
+            var file = new FileInfo(filePath);
+            file.Directory?.Create();
+
+            using (var stream = new StreamWriter(filePath,true))
             {
                 stream.WriteLine(message);
             }
