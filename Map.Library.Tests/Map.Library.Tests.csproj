@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MyMap.Library\Map.Library.csproj" />
+    <ProjectReference Include="..\Map.Library\Map.Library.csproj" />
   </ItemGroup>
 
 </Project>
