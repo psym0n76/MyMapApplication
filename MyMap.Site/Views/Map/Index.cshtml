@@ -1,0 +1,70 @@
+﻿@using Map.Site.ViewModels
+@model Map.Site.ViewModels.MapViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Set the size of the div element that contains the map */
+        #map {
+            height: 400px; /* The height is 400 pixels */
+            width: 100%; /* The width is the width of the web page */
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+
+    @using (Html.BeginForm("GetLocation", "Map"))
+    {
+        @Html.ValidationSummary(true, "Please fix the following errors.")
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+
+                    @Html.TextBoxFor(m => m.Location, new { @class = "form-control", style = "width:350px;" })
+                    @Html.ValidationMessageFor(m => m.Location)
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Go!</button>
+                </div>
+            </div>
+        </div>
+    }
+
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <script>
+        // Initialize and add the map
+        function initMap() {
+
+            var lo = @Html.ViewData.Model.Longitude;
+            var la = @Html.ViewData.Model.Latitude;
+
+            var destination = { lat:  Number(la), lng: Number(lo)};
+
+            var map = new window.google.maps.Map(document.getElementById('map'), { zoom: 12, center: destination });
+
+            var marker = new window.google.maps.Marker({ position: destination, map: map, title: "Longitude: " + lo.toString() + " Latitude: " + la.toString() });
+
+        }
+    </script>
+
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5l-3NS31trWbphIePZQuAYb95isX1i9E&callback=initMap">
+</script>
+</body>
+</html>
+
+

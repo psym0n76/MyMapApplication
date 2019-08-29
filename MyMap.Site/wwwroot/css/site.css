@@ -26,6 +26,7 @@ html {
 }
 
 .box-shadow {
+    /* ReSharper disable once RequiresFallbackColor */
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
@@ -53,4 +54,14 @@ body {
   /* Set the fixed height of the footer here */
   height: 60px;
   line-height: 60px; /* Vertically center the text there */
+}
+
+.field-validation-error,
+label.error {
+    color: red;
+}
+
+.input-validation-error,
+input.error {
+    border: 2px solid red;
 }
