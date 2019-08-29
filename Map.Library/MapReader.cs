@@ -3,7 +3,6 @@ using Map.Library.Models;
 using System.Threading.Tasks;
 using Map.Library.ApiHelper;
 
-
 namespace Map.Library
 {
     public class MapReader : IMapReader
