@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using Map.Library.Models.JsonModel;
 
 namespace Map.Library.Models
 {

@@ -1,6 +1,4 @@
-using System;
-
-namespace MyMap.Site.Models
+namespace Map.Site.Models
 {
     public class ErrorViewModel
     {

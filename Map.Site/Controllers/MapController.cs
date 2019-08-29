@@ -32,8 +32,6 @@ namespace Map.Site.Controllers
             map.Latitude = result.Results.Select(x => x.Geometry.Lat).FirstOrDefault();
             map.Longitude = result.Results.Select(x => x.Geometry.Lng).FirstOrDefault();
 
-            ViewBag.successMessage = "Success";
-
             return View("Index", map);
         }
     }

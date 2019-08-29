@@ -1,6 +1,7 @@
 ﻿using Map.Library.Logger;
 using Map.Library.Models;
 using System.Threading.Tasks;
+using Map.Library.ApiHelper;
 
 
 namespace Map.Library
@@ -18,7 +19,7 @@ namespace Map.Library
 
         public MapModel GetGeoLocation(string location)
         {
-            ApiHelper.InitializeClient();
+            ApiHelper.ApiHelper.InitializeClient();
 
             var url = "https://api.opencagedata.com/geocode/v1/json?q=" + location + "&key=83d4e64ab9a346b790ecdbad4c6c09d6&language=en&pretty=1";
 

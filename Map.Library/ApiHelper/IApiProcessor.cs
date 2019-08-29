@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Map.Library
+namespace Map.Library.ApiHelper
 {
     public interface IApiProcessor
     {

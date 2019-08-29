@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Map.Site.Models;
 using Microsoft.AspNetCore.Mvc;
-using MyMap.Site.Models;
+using System.Diagnostics;
 
-namespace MyMap.Site.Controllers
+namespace Map.Site.Controllers
 {
     public class HomeController : Controller
     {

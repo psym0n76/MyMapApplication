@@ -1,5 +1,4 @@
-﻿@using Map.Site.ViewModels
-@model Map.Site.ViewModels.MapViewModel
+﻿@model Map.Site.ViewModels.MapViewModel
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -55,15 +54,16 @@
 
             var map = new window.google.maps.Map(document.getElementById('map'), { zoom: 12, center: destination });
 
+// ReSharper disable once UnusedLocals
             var marker = new window.google.maps.Marker({ position: destination, map: map, title: "Longitude: " + lo.toString() + " Latitude: " + la.toString() });
 
         }
     </script>
 
 
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5l-3NS31trWbphIePZQuAYb95isX1i9E&callback=initMap">
-</script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5l-3NS31trWbphIePZQuAYb95isX1i9E&callback=initMap">
+    </script>
 </body>
 </html>
 

@@ -1,4 +1,4 @@
-﻿namespace Map.Library.Models
+﻿namespace Map.Library.Models.JsonModel
 {
     public class Status
     {

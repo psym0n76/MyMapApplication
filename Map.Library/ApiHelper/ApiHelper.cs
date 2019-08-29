@@ -1,7 +1,7 @@
 ﻿using System.Net.Http;
 using System.Net.Http.Headers;
 
-namespace Map.Library
+namespace Map.Library.ApiHelper
 {
     public static class ApiHelper
     {
